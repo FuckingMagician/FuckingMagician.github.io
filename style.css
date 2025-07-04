@@ -46,7 +46,7 @@ h1 {
 @media (max-width: 600px) {
   h1 {
     /* A smaller font size to prevent line breaks on phones */
-    font-size: 0.8rem;
+    font-size: 1.4rem;
   }
 }
 
