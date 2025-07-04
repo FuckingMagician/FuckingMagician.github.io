@@ -1,14 +1,17 @@
-/* Reset básico */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corpo do site */
+/* Base do site */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f4f8;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fbfd;
   color: #333;
   line-height: 1.6;
 }
@@ -42,7 +45,7 @@ header p {
   margin-bottom: 0;
 }
 
-/* Títulos de seção */
+/* Títulos */
 h2 {
   font-size: 1.8rem;
   margin-bottom: 15px;
@@ -57,7 +60,7 @@ h3 {
   color: #333;
 }
 
-/* Seções gerais */
+/* Seções */
 section {
   margin-bottom: 40px;
 }
@@ -67,7 +70,7 @@ p {
   margin-bottom: 1em;
 }
 
-/* Lista */
+/* Listas */
 ul {
   list-style: none;
   padding-left: 0;
@@ -78,7 +81,7 @@ ul li {
   border-bottom: 1px solid #ddd;
 }
 
-/* Links */
+/* Links padrão */
 a {
   color: #007acc;
   text-decoration: none;
@@ -89,21 +92,45 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Projetos */
+/* Estilo dos cards de projeto */
 .project {
   margin-bottom: 40px;
   padding: 20px;
   background-color: #ffffff;
   border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project img {
   max-width: 100%;
   height: auto;
-  margin: 10px 0;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Botões GitHub */
+.project a {
+  display: inline-block;
+  background-color: #007acc;
+  color: white;
+  padding: 8px 12px;
   border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.project a:hover {
+  background-color: #005f99;
 }
 
 /* Rodapé */
@@ -114,4 +141,23 @@ footer {
   margin-top: 40px;
   font-size: 0.9rem;
   color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
 }
