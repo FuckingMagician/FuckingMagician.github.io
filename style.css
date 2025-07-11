@@ -1,5 +1,19 @@
 /* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Variáveis CSS com a nova paleta de cores */
+:root {
+  --primary-color: #3b82f6; 
+  --primary-hover: #2563eb;
+  --dark-bg: #111827;      
+  --light-bg: #f8f9fa;     
+  --card-bg: #ffffff;
+  --text-dark: #1f2937;    
+  --text-light: #f9fafb;   
+  --text-secondary: #6b7280; 
+  --border-color: #e5e7eb; 
+  --base-radius: 12px;     
+}
 
 /* Reset */
 * {
@@ -8,12 +22,13 @@
   box-sizing: border-box;
 }
 
-/* Base do site */
+/* Base do site com as cores novas */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f9fbfd;
-  color: #333;
-  line-height: 1.6;
+  background-color: var(--light-bg);
+  background-image: radial-gradient(circle at top, hsl(210, 40%, 98%), var(--light-bg));
+  color: var(--text-dark);
+  line-height: 1.7;
 }
 
 /* Container central */
@@ -23,152 +38,165 @@ body {
   padding: 20px;
 }
 
-/* Cabeçalho */
+/* CABEÇALHO com layout original (centralizado) */
 header {
-  background-color: #007acc;
-  color: white;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
   padding: 40px 0 20px;
-  text-align: center;
+  text-align: center; /* <-- Revertido para centralizado */
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative; /* <-- Essencial para posicionar os botões */
 }
 
-h1 {
-  /* Default font size for larger screens (tablets, desktops) */
+header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  text-align: center;
 }
-
-/* This style will only apply to screens 600px wide or smaller */
-@media (max-width: 600px) {
-  h1 {
-    /* A smaller font size to prevent line breaks on phones */
-    font-size: 1.4rem;
-  }
-}
-
 
 header p {
   font-size: 1rem;
   margin-bottom: 0;
+  color: #d1d5db; 
 }
 
-/* Títulos */
+/* Botões de idioma posicionados como antes */
+.language-switch {
+  position: absolute;
+  top: 20px; /* Ajuste a posição vertical conforme seu gosto */
+  right: 20px; /* Ajuste a posição horizontal */
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  width: 125px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-dark);
+  background-color: var(--light-bg);
+  padding: 8px 12px;
+  border: none;
+  border-radius: var(--base-radius);
+  font-weight: 500;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.lang-btn:hover {
+  transform: translateY(-2px);
+  background-color: #e5e7eb;
+  text-decoration: none;
+}
+
+/* Títulos das seções com o novo visual */
 h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #007acc;
-  border-bottom: 2px solid #007acc;
-  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--text-dark);
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--text-dark);
 }
 
 /* Seções */
 section {
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Espaçamento original entre seções */
 }
 
 /* Parágrafos */
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
+  color: var(--text-secondary);
+  max-width: 75ch;
 }
 
-/* Listas */
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Links padrão */
+/* Links padrão com cores novas */
 a {
-  color: #007acc;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--primary-hover);
+  text-decoration: none;
 }
 
-/* Estilo dos cards de projeto */
+/* PROJETOS em lista vertical (layout original) */
 .project {
-  margin-bottom: 40px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--base-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px; /* <-- Margem restaurada para espaçar a lista */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .project img {
+  display: block;
+  margin: 15px auto;
   max-width: 100%;
   height: auto;
-  margin: 10px auto;
-  display: block;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
 }
 
-/* Botões GitHub */
 .project a {
   display: inline-block;
-  background-color: #007acc;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 10px 15px;
+  border-radius: var(--base-radius);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   transition: background-color 0.2s ease;
 }
 
 .project a:hover {
-  background-color: #005f99;
+  background-color: var(--primary-hover);
+  color: var(--text-light);
+}
+
+/* Seção de Contato */
+#contact p {
+  font-size: 1.1rem;
 }
 
 /* Rodapé */
 footer {
-  background-color: #e2e2e2;
+  background-color: var(--light-bg);
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 40px 20px;
+  margin-top: 20px;
   font-size: 0.9rem;
-  color: #333;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
 }
 
-/* Responsividade 
+/* Mídia Query para ajustar o tamanho da fonte em telas menores */
 @media (max-width: 600px) {
-  .container {
-    padding: 10px;
+  h1 {
+    font-size: 1.8rem;
   }
-
-  header h1 {
-    font-size: 1.3rem;
-  }
-
   h2 {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
-
-  h3 {
-    font-size: 1.2rem;
+  .language-switch {
+    position: static; /* No mobile, os botões saem do canto e vão para baixo */
+    margin-top: 20px;
+    justify-content: center;
   }
-}*/
+}

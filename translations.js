@@ -1,0 +1,40 @@
+const translations = {
+    en: {
+        page_title: "João Pedro Teixeira Alberto - Computer Science Student",
+        subtitle: "Computer Science Student",
+        about_title: "About Me",
+        about_p1: "I'm a Computer Science student passionate about technology, games and software development. I love making cool ideas come to life, whether it's through game development or building software tools that solve real problems.",
+        about_p2: "At university, I've been working on a variety of projects that strengthened my skills and taught me how to collaborate, adapt, and think creatively. Whether it's a game, an app, or any other project, I enjoy the process of designing, building, and refining. I love challenging myself into creating something cool.",
+        about_p3: "I'm always curious to learn more about things I find interesting. My goal is to keep growing as a developer and eventually create something meaningful and fun that people will love.",
+        about_p4: "My goal with this page is to make something casual where I can share some projects I've worked on at university or in my free time, and also to inspire me to keep exploring new ideas.",
+        projects_title: "Projects",
+        ttr_desc: "A digital version of the famous board game Ticket To Ride, made with Unity.",
+        view_github: "🔗 View on GitHub",
+        munchkin_desc: "A digital version of the board game called Munchkin. The game was made with Unity and tries to capture the fun and the chaos of the card based dungeon game.",
+        pong_desc: "A simplified Pong game, made using the PPlay framework, based in Pygame.",
+        space_desc: "A simple version of the classic and beloved game Space Invaders. Was created using a Pygame based framework called PPlay.",
+        sudoku_desc: "A mobile (android) Sudoku game made entirely using the framework Flutter.",
+        booking_desc: "This project was composed of 2 Flutter made apps, one to register properties to be rented, the other one, was used to book a reservation of a property.",
+        contact_title: "Contact",
+        footer_text: "© 2025 João Alberto"
+    },
+    pt: {
+        page_title: "João Pedro Teixeira Alberto - Estudante de Ciência da Computação",
+        subtitle: "Estudante de Ciência da Computação",
+        about_title: "Sobre Mim",
+        about_p1: "Sou um estudante de Ciência da Computação apaixonado por tecnologia, jogos e desenvolvimento de software. Adoro dar vida a ideias interessantes, seja através do desenvolvimento de jogos ou da construção de ferramentas de software que resolvem problemas reais.",
+        about_p2: "Na faculdade, tenho trabalhado em diversos projetos que fortaleceram minhas habilidades e me ensinaram a colaborar, me adaptar e pensar de forma criativa. Seja um jogo, um aplicativo ou qualquer outro projeto, eu gosto muito do processo de projetar, construir e refinar. Adoro me desafiar a criar algo legal.",
+        about_p3: "Estou sempre curioso para aprender mais sobre tópicos que eu acho interessantes. Meu objetivo é continuar crescendo como desenvolvedor e, eventualmente, criar algo significativo e divertido que as pessoas adorarem.",
+        about_p4: "Meu objetivo com esta página é criar algo bem informal onde eu possa compartilhar alguns projetos em que trabalhei na universidade ou no meu tempo livre, e também para me inspirar a continuar explorando novas ideias.",
+        projects_title: "Projetos",
+        ttr_desc: "Uma versão digital do famoso jogo de tabuleiro Ticket To Ride, feita com Unity.",
+        view_github: "🔗 Ver no GitHub",
+        munchkin_desc: "Uma versão digital do jogo de tabuleiro chamado Munchkin. O jogo foi feito com Unity e tenta capturar a diversão e o caos do jogo original.",
+        pong_desc: "Um jogo de Pong bem simples, feito usando o framework PPlay, baseado em Pygame.",
+        space_desc: "Uma versão simples do clássico e amado jogo Space Invaders. Foi criado usando um framework baseado em Pygame chamado PPlay.",
+        sudoku_desc: "Um jogo de Sudoku para celular (Android) feito inteiramente com o framework Flutter.",
+        booking_desc: "Este projeto foi composto por 2 aplicativos feitos em Flutter, um para registrar imóveis para aluguel e o outro, usado para fazer a reserva de um imóvel.",
+        contact_title: "Contato",
+        footer_text: "© 2025 João Alberto"
+    }
+};
